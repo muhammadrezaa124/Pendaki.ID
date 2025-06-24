@@ -5,361 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Panduan Pendakian Gunung Indonesia - Pendaki.ID</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0; 
-      padding: 0;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #ffffff;
-      color: #333;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-     {
-      header
-      background-color: #2d3e50;
-      color: white;
-      padding: 10px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 14px;
-    }
-    header a.btn-yellow {
-      background-color: #ffc107;
-      color: #1a252f;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 4px;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    nav {
-      background-color: #1a252f;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav .logo h2 {
-      color: rgb(255, 250, 250);
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-    }
-    nav ul li a {
-      color: rgb(255, 255, 255);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 16px;
-      padding: 6px 12px;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-      cursor: pointer;
-    }
-    nav ul li a:hover {
-      background-color: #ffc107;
-      color: #00274b;
-    }
-    main {
-      max-width: 1000px;
-      margin: 30px auto 60px;
-      background: rgb(255, 255, 255);
-      border-radius: 10px;
-      padding: 40px 30px;
-      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
-    }
-    p {
-      color: #ffffff;
-      margin-bottom: 20px;
-    }
-
-    /* Hero */
-    .hero {
-      background: url('indo.jpg') no-repeat center center/cover;
-      height: 350px;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      border-radius: 10px;
-      margin-bottom: 40px;
-      padding: 0 20px;
-      box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.3);
-    }
-    .hero h1 {
-      font-size: 36px;
-      margin-bottom: 15px;
-      text-shadow: 1px 1px 6px #000;
-    }
-    .hero p {
-      font-size: 18px;
-      max-width: 700px;
-      text-shadow: 1px 1px 5px #000000;
-    }
-
-    /* Features */
-    .features {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 25px;
-      margin-bottom: 50px;
-    }
-    .feature-box {
-      background-color: #2d3e50;
-      color: rgb(255, 255, 255);
-      border-radius: 8px;
-      padding: 25px;
-      flex: 1 1 280px;
-      min-width: 280px;
-      box-shadow: 0 4px 10px rgb(0 0 0 / 0.15);
-      text-align: center;
-    }
-    .feature-box h3 {
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    /* Welcome */
-    .welcome-section {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .welcome-section h2 {
-      font-size: 30px;
-      margin-bottom: 15px;
-      color: #2d3e50;
-    }
-    .welcome-section p {
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 18px;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    .image-bottom {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 30px;
-      margin-bottom: 60px;
-    }
-    .image-bottom img {
-      width: 300px;
-      border-radius: 10px;
-      object-fit: cover;
-      box-shadow: 0 3px 8px rgb(0 0 0 / 0.2);
-      max-height: 200px;
-    }
-
-    /* Gunung */
-    .gunung-list {
-      margin-bottom: 60px;
-    }
-    .gunung-card {
-      display: flex;
-      gap: 25px;
-      margin-bottom: 30px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 20px;
-      align-items: center;
-    }
-    .gunung-card:last-child {
-      border-bottom: none;
-    }
-    .gunung-card img {
-      width: 220px;
-      border-radius: 10px;
-      object-fit: cover;
-      box-shadow: 0 3px 6px rgb(0 0 0 / 0.15);
-      flex-shrink: 0;
-      max-height: 140px;
-    }
-    .gunung-card h2 {
-      margin-bottom: 10px;
-      font-size: 26px;
-      color: #2d3e50;
-    }
-    .gunung-card p {
-      font-size: 16px;
-      color: #444;
-    }
-
-    /* Tips */
-    .tips-list {
-      list-style: disc inside;
-      font-size: 18px;
-      color: #444;
-      max-width: 700px;
-      margin-left: 15px;
-      margin-bottom: 60px;
-    }
-    .tips-list li {
-      margin-bottom: 15px;
-      line-height: 1.5;
-    }
-
-    /* Peralatan */
-    .peralatan-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: flex-start;
-      margin-bottom: 60px;
-    }
-    .peralatan-item {
-      flex: 1 1 200px;
-      max-width: 220px;
-      background: #fafafa;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
-      text-align: center;
-    }
-    .peralatan-item img {
-      width: 100%;
-      max-height: 140px;
-      border-radius: 8px;
-      object-fit: cover;
-      margin-bottom: 12px;
-    }
-    .peralatan-item h3 {
-      margin-bottom: 10px;
-      color: #2d3e50;
-    }
-    .peralatan-item p {
-      color: #555;
-      font-size: 15px;
-    }
-
-    .popup {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.6);
-}
-
-
-    /* Artikel */
-    .artikel-list {
-      max-width: 800px;
-      margin-left: 15px;
-      color: #444;
-      margin-bottom: 60px;
-    }
-    .artikel-list article {
-      margin-bottom: 25px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #ddd;
-    }
-    .artikel-list h3 {
-      color: #2d3e50;
-      margin-bottom: 10px;
-    }
-    .artikel-list p {
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    /* Kontak */
- #kontak {
-  color: #000000; /* warna teks gelap */
-  background-color: #ffffff; /* opsional: latar belakang putih */
-  padding: 40px;
-  border-radius: 10px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.kontak-form label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: #000000; /* <- Pastikan label tidak putih */
-}
-
-.kontak-form input,
-.kontak-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1.5px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-  resize: vertical;
-  color: #000000; /* <- Warna teks input */
-  background-color: #000000; /* <- Warna background input */
-  font-family: 'Poppins', sans-serif;
-}
-
-.kontak-form input::placeholder,
-.kontak-form textarea::placeholder {
-  color: #888; /* Placeholder warna abu, agar mudah dibaca */
-}
-
-.kontak-form button {
-  background-color: #1a252f;
-  border: none;
-  padding: 12px 24px;
-  font-weight: 600;
-  font-size: 18px;
-  color: #000000;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%;
-}
-
-.kontak-form button:hover {
-  background-color: #525150;
-}
-
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .features {
-        flex-direction: column;
-      }
-      .peralatan-list {
-        justify-content: center;
-      }
-      .gunung-card {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .gunung-card img {
-        width: 100%;
-        max-height: 220px;
-        margin-bottom: 12px;
-      }
-      .image-bottom {
-        flex-direction: column;
-      }
-      .image-bottom img {
-        width: 100%;
-        max-height: 220px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
-    <span>Selamat datang, Para pendaki!  <a href="#" style="color:#ffc107; text-decoration:none;"></a></span>
+    <span>Selamat datang, Para pendaki!</span>
   </header>
 
   <nav>
@@ -377,6 +28,7 @@
   </nav>
 
   <main>
+
     <!-- Beranda -->
     <section id="beranda">
       <div class="hero">
@@ -401,108 +53,107 @@
 
       <div class="welcome-section">
         <h2>Selamat Datang di Pendaki.ID</h2>
-        <p>Website ini dibuat sebagai panduan lengkap bagi para calon pendaki</p>
-  <div class="image-bottom">
-    <img src="rinjani.jpg" alt="Pemandangan Gunung 1" />
-    <img src="semeru.jpg" alt="Pemandangan Gunung 2" />
-  </div>
-</section>
+        <p>Website ini dibuat sebagai panduan lengkap bagi para calon pendaki.</p>
+        <div class="image-bottom">
+          <img src="rinjani.jpg" alt="Pemandangan Gunung 1" />
+          <img src="semeru.jpg" alt="Pemandangan Gunung 2" />
+        </div>
+      </div>
+    </section>
 
-<!-- Gunung -->
-<section id="gunung" class="gunung-list">
-  <h2>Daftar Gunung Populer</h2>
+    <!-- Gunung -->
+    <section id="gunung" class="gunung-list">
+      <h2>Daftar Gunung Populer</h2>
 
-  <div class="gunung-card">
-    <img src="semeru.jpg" alt="Gunung Semeru" />
-    <div>
-      <h2>Gunung Semeru</h2>
-      <p>Gunung Semeru adalah gunung tertinggi di Pulau Jawa dengan ketinggian sekitar 3.676 meter di atas permukaan laut. Terletak di Jawa Timur, Semeru dikenal dengan keindahan alamnya yang menakjubkan dan jalur pendakian yang menantang. Puncaknya yang sering disebut Mahameru menawarkan panorama spektakuler, terutama saat matahari terbit. Gunung ini juga merupakan gunung berapi aktif yang menjadi tujuan favorit para pendaki dan pecinta alam.
-.</p>
-    </div>
-  </div>
+      <div class="gunung-card">
+        <img src="semeru.jpg" alt="Gunung Semeru" />
+        <div>
+          <h2>Gunung Semeru</h2>
+          <p>Gunung Semeru adalah gunung tertinggi di Pulau Jawa...</p>
+        </div>
+      </div>
 
-  <div class="gunung-card">
-    <img src="rinjani.jpg" alt="Gunung Rinjani" />
-    <div>
-      <h2>Gunung Rinjani</h2>
-      <p>Gunung Rinjani adalah gunung berapi kedua tertinggi di Indonesia dengan ketinggian sekitar 3.726 meter, terletak di Pulau Lombok, Nusa Tenggara Barat. Gunung ini terkenal dengan Danau Segara Anak yang indah di kawahnya, serta pemandangan alam yang memukau. Rinjani menjadi destinasi favorit bagi para pendaki yang mencari petualangan sekaligus keindahan alam yang luar biasa. Selain itu, gunung ini juga memiliki nilai budaya dan spiritual penting bagi masyarakat setempat.
-</p>
-    </div>
-  </div>
+      <div class="gunung-card">
+        <img src="rinjani.jpg" alt="Gunung Rinjani" />
+        <div>
+          <h2>Gunung Rinjani</h2>
+          <p>Gunung Rinjani adalah gunung berapi kedua tertinggi di Indonesia...</p>
+        </div>
+      </div>
 
-  <div class="gunung-card">
-    <img src="bromo.jpg" alt="Gunung Bromo" />
-    <div>
-      <h2>Gunung Bromo</h2>
-      <p>Gunung Bromo adalah gunung berapi aktif yang terletak di Jawa Timur dan terkenal dengan pemandangan matahari terbit (sunrise) yang menakjubkan. Dengan ketinggian sekitar 2.329 meter, Bromo menjadi salah satu destinasi wisata dan pendakian paling populer di Indonesia. Keunikan Bromo terletak pada lautan pasir di sekitarnya yang luas dan pemandangan kawah yang dramatis, menjadikannya tempat favorit bagi para fotografer dan pecinta alam.
-</p>
-    </div>
-  </div>
-<h3>Baca Selengkapnya Tentang Gunung Di indonesia</h3>
-<a href="https://www.gramedia.com/best-seller/gunung-terindah-di-indonesia/" target="_blank"> 10+ Gunung Terindah di Indonesia, Surga Bagi Para Pendaki</a>
-    </p>
-    </div>
-  </div>
-</section>
+      <div class="gunung-card">
+        <img src="bromo.jpg" alt="Gunung Bromo" />
+        <div>
+          <h2>Gunung Bromo</h2>
+          <p>Gunung Bromo adalah gunung berapi aktif di Jawa Timur...</p>
+        </div>
+      </div>
 
-<!-- Tips -->
-<section id="tips">
-  <h2>Tips Mendaki Gunung</h2>
-  <ul class="tips-list">
-    <li>Persiapkan fisik dengan latihan rutin sebelum pendakian.</li>
-    <li>Bawa peralatan yang sesuai dan jangan terlalu berat.</li>
-    <li>Perhatikan cuaca dan jangan memaksakan diri saat kondisi buruk.</li>
-    <li>Jaga kebersihan lingkungan selama pendakian.</li>
-    <li>Selalu ikuti arahan pemandu atau petugas setempat.</li>
-  </ul>
-</section>
+      <h3>Baca Selengkapnya Tentang Gunung Di Indonesia</h3>
+      <a href="https://www.gramedia.com/best-seller/gunung-terindah-di-indonesia/" target="_blank">
+        10+ Gunung Terindah di Indonesia, Surga Bagi Para Pendaki
+      </a>
+    </section>
 
-<!-- Peralatan -->
-<section id="peralatan">
-  <h2>Peralatan Wajib Bawa</h2>
-  <div class="peralatan-list">
-    <div class="peralatan-item" onclick="showPopup('Tenda', 'Tenda-Camping-Terbaik-1.png', 'Tempat berlindung selama pendakian dan beristirahat.')">
-      <img src="Tenda-Camping-Terbaik-1.png" alt="Tenda" />
-      <h3>Tenda</h3>
-      <p>Tempat berlindung selama pendakian dan beristirahat.</p>
-    </div>
-    <div class="peralatan-item" onclick="showPopup('Sepatu Gunung', 'data.jpeg', 'Sepatu yang nyaman dan kuat untuk mendukung aktivitas pendakian.')">
-      <img src="data.jpeg" alt="Sepatu Gunung" />
-      <h3>Sepatu Gunung</h3>
-      <p>Sepatu yang nyaman dan kuat untuk mendukung aktivitas pendakian.</p>
-    </div>
-    <div class="peralatan-item" onclick="showPopup('Kompor Portable', 'kompor.jpeg', 'Untuk memasak makanan dan merebus air selama di gunung.')">
-      <img src="kompor.jpeg" alt="Kompor Portable" />
-      <h3>Kompor Portable</h3>
-      <p>Untuk memasak makanan dan merebus air selama di gunung.</p>
-    </div>
-    <div class="peralatan-item" onclick="showPopup('Senter', 'senter.jpeg', 'Penerangan saat malam hari atau di area gelap.')">
-      <img src="senter.jpeg" alt="Senter" />
-      <h3>Senter</h3>
-      <p>Penerangan saat malam hari atau di area gelap.</p>
-    </div>
-  </div>
-</section>
+    <!-- Tips -->
+    <section id="tips">
+      <h2>Tips Mendaki Gunung</h2>
+      <ul class="tips-list">
+        <li>Persiapkan fisik dengan latihan rutin sebelum pendakian.</li>
+        <li>Bawa peralatan yang sesuai dan jangan terlalu berat.</li>
+        <li>Perhatikan cuaca dan jangan memaksakan diri saat kondisi buruk.</li>
+        <li>Jaga kebersihan lingkungan selama pendakian.</li>
+        <li>Selalu ikuti arahan pemandu atau petugas setempat.</li>
+      </ul>
+    </section>
 
-<!-- Artikel -->
-<section id="artikel">
-  <h2>Artikel Pendakian</h2>
-  <div class="artikel-list">
-    <article>
-       <h3><a href="https://volix.co.id/tourism/10-gunung-untuk-pemula-yang-aman-didaki">10 Gunung Terbaik untuk Pendaki Pemula</a></h3>
-      <h3>Mengenal gunung-gunung dengan jalur pendakian yang aman dan mudah dilalui.</h3>
-    </article>
-    <article>
-      <h3><a href="https://bobobox.com/blog/cara-packing-carrier/?utm_source=chatgpt.com">Tips Packing Peralatan Gunung</a></h3>
-      <h3>Cara mengepak perlengkapan agar ringan dan praktis dibawa.</h3>
-    </article>
-    <article>
-      <h3><a href="https://superlive.id/superadventure/artikel/news/sering-terjadi-hujan-es-saat-di-gunung-apa-penyebabnya-dan-gimana-cara-menghadapinya?utm_source=chatgpt.com">Kenali Cuaca Gunung dan Cara Menghadapinya</a></h3>
-      <h3>Informasi penting tentang kondisi cuaca di pegunungan dan bagaimana pendaki bisa bertindak.</h3>
-    </article>
-  </div>
-</section>
+    <!-- Peralatan -->
+    <section id="peralatan">
+      <h2>Peralatan Wajib Bawa</h2>
+      <div class="peralatan-list">
+        <div class="peralatan-item" onclick="showPopup('Tenda', 'Tenda-Camping-Terbaik-1.png', 'Tempat berlindung selama pendakian dan beristirahat.')">
+          <img src="Tenda-Camping-Terbaik-1.png" alt="Tenda" />
+          <h3>Tenda</h3>
+          <p>Tempat berlindung selama pendakian dan beristirahat.</p>
+        </div>
+        <div class="peralatan-item" onclick="showPopup('Sepatu Gunung', 'data.jpeg', 'Sepatu yang nyaman dan kuat untuk mendukung aktivitas pendakian.')">
+          <img src="data.jpeg" alt="Sepatu Gunung" />
+          <h3>Sepatu Gunung</h3>
+          <p>Sepatu yang nyaman dan kuat untuk mendukung aktivitas pendakian.</p>
+        </div>
+        <div class="peralatan-item" onclick="showPopup('Kompor Portable', 'kompor.jpeg', 'Untuk memasak makanan dan merebus air selama di gunung.')">
+          <img src="kompor.jpeg" alt="Kompor Portable" />
+          <h3>Kompor Portable</h3>
+          <p>Untuk memasak makanan dan merebus air selama di gunung.</p>
+        </div>
+        <div class="peralatan-item" onclick="showPopup('Senter', 'senter.jpeg', 'Penerangan saat malam hari atau di area gelap.')">
+          <img src="senter.jpeg" alt="Senter" />
+          <h3>Senter</h3>
+          <p>Penerangan saat malam hari atau di area gelap.</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Artikel -->
+    <section id="artikel">
+      <h2>Artikel Pendakian</h2>
+      <div class="artikel-list">
+        <article>
+          <h3><a href="https://volix.co.id/tourism/10-gunung-untuk-pemula-yang-aman-didaki">10 Gunung Terbaik untuk Pendaki Pemula</a></h3>
+          <h3>Mengenal gunung-gunung dengan jalur pendakian yang aman dan mudah dilalui.</h3>
+        </article>
+        <article>
+          <h3><a href="https://bobobox.com/blog/cara-packing-carrier/">Tips Packing Peralatan Gunung</a></h3>
+          <h3>Cara mengepak perlengkapan agar ringan dan praktis dibawa.</h3>
+        </article>
+        <article>
+          <h3><a href="https://superlive.id/superadventure/artikel/news/sering-terjadi-hujan-es-saat-di-gunung-apa-penyebabnya-dan-gimana-cara-menghadapinya">Kenali Cuaca Gunung dan Cara Menghadapinya</a></h3>
+          <h3>Informasi penting tentang kondisi cuaca di pegunungan dan bagaimana pendaki bisa bertindak.</h3>
+        </article>
+      </div>
+    </section>
+
+    <!-- Video -->
 <div style="margin-top: 30px; text-align: center;">
   <h3>Video 26 Perlengkapan dan Tips Penting Sebelum Mendaki Gunung</h3>
   <iframe width="560" height="315"
@@ -513,57 +164,62 @@
           allowfullscreen>
   </iframe>
 </div>
-
-
-
-<!-- Kontak -->
+    <!-- Kontak -->
 <section id="kontak" style="color: #000000;">
   <h3 style="color: #000000;">Kontak Kami</h3>
   <div style="display: flex; gap: 40px; flex-wrap: nowrap; justify-content: center; align-items: flex-start;">
-
-    <!-- Fariz -->
-    <div style="text-align: center; width: 200px; color: #000000;">
-      <img src="fariz-removebg-preview.png" alt="Call Center" width="80" />
-      <p style="margin: 5px 0; font-size: 16px; font-weight: bold; color: #000000;">Fariz Afdilah Muhamad</p>
-      <a href="https://wa.me/6281282612603" target="_blank" style="color: #25D366; text-decoration: none; font-size: 14px;">
-        <img src="icon wa.png" alt="WhatsApp" width="20" /> +62 812-8261-2603
-      </a>
-    </div>
-
-    <!-- Reza -->
-    <div style="text-align: center; width: 200px; color: #000000;">
-      <img src="reza-removebg-preview.png" alt="Call Center" width="80" />
-      <p style="margin: 5px 0; font-size: 16px; font-weight: bold; color: #000000;">Muhammad Reza</p>
-      <a href="https://wa.me/6288210755283" target="_blank" style="color: #25D366; text-decoration: none; font-size: 14px;">
-        <img src="icon wa.png" alt="WhatsApp" width="20" /> +62 882-1075-5283
-      </a>
-    </div>
-
-    <!-- Febry -->
-    <div style="text-align: center; width: 200px; color: #000000;">
-      <img src="febry-removebg-preview.png" alt="Call Center" width="80" />
-      <p style="margin: 5px 0; font-size: 16px; font-weight: bold; color: #000000;">Muhamad Febryansyah</p>
-      <a href="https://wa.me/6289651153790" target="_blank" style="color: #25D366; text-decoration: none; font-size: 14px;">
-        <img src="icon wa.png" alt="WhatsApp" width="20" /> +62 896-5115-3790
-      </a>
-    </div>
-
-    <!-- Dafa -->
-    <div style="text-align: center; width: 200px; color: #000000;">
-      <img src="dafa-removebg-preview.png" alt="Call Center" width="80" />
-      <p style="margin: 5px 0; font-size: 16px; font-weight: bold; color: #000000;">Dafa Alfiansyah</p>
-      <a href="https://wa.me/6285710871994" target="_blank" style="color: #25D366; text-decoration: none; font-size: 15px;">
-        <img src="icon wa.png" alt="WhatsApp" width="20" /> +62 857-1087-1994
-      </a>
-    </div>
-
+        <!-- Fariz -->
+        <div>
+          <img src="fariz-removebg-preview.png" width="80" />
+            <p><strong>Fariz Afdilah Muhamad</strong></p>
+          <a href="https://wa.me/6281282612603" target="_blank">
+		  <img src="icon wa.png" alt="WhatsApp" width="20" />+62 812-8261-2603
+		  </a>
+        </div>
+        <!-- Reza -->
+        <div>
+          <img src="reza-removebg-preview.png" width="80" />
+          <p><strong>Muhammad Reza</strong></p>
+          <a href="https://wa.me/6288210755283" target="_blank">
+		  <img src="icon wa.png" alt="WhatsApp" width="20" />+62 882-1075-5283
+		  </a>
+        </div>
+        <!-- Febry -->
+        <div>
+          <img src="febry-removebg-preview.png" width="80" />
+          <p><strong>Muhamad Febryansyah</strong></p>
+          <a href="https://wa.me/6289651153790" target="_blank">
+		  <img src="icon wa.png" alt="WhatsApp" width="20" />+62 896-5115-3790
+		  </a>
+        </div>
+        <!-- Dafa -->
+        <div>
+          <img src="dafa-removebg-preview.png" width="80" />
+          <p><strong>Dafa Alfiansyah</strong></p>
+          <a href="https://wa.me/6285710871994" target="_blank">
+		  <img src="icon wa.png" alt="WhatsApp" width="20" />+62 857-1087-1994
+		  </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+    <!-- Popup Modal -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+    <h2 id="popup-title"></h2>
+    <img id="popup-img" src="" alt="" />
+    <p id="popup-description"></p>
   </div>
-</section>
+</div>
+  
 
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Pendaki.ID | Sumber: <a href="https://www.pendaki.id">Panduan Pendakian Gunung Indonesia</a>
+  </footer>
+  
 
-
-
-</section>
-<footer style="text-align: center; padding: 20px; background-color: #1a252f; color: white;">
-  &copy; 2025 Pendaki.ID | Sumber informasi dari <a href="https://www.pendaki.id" style="color: #ffc107;">Panduan Pendakian Gunung Indonesia</a>
-</footer>
+</body>
+</html>
